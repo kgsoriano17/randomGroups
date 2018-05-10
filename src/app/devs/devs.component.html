@@ -1,0 +1,54 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-xs-4">
+        <h2>Team 1</h2>
+        <ul class="developers">
+          <li *ngFor="let dev of team1"
+            [class.selected]="dev === selectedDev"
+            (click)="onSelect(dev)">
+            <span class="badge">{{dev.id}}</span> {{dev.name}}
+          </li>
+        </ul>
+        
+        <app-dev-detail [dev]="selectedDev"></app-dev-detail>
+      </div>
+      <div class="col-xs-4">
+        <h2>Team 2</h2>
+        <ul class="developers">
+          <li *ngFor="let dev of team2"
+            [class.selected]="dev === selectedDev"
+            (click)="onSelect(dev)">
+            <span class="badge">{{dev.id}}</span> {{dev.name}}
+          </li>
+        </ul>
+    
+        <app-dev-detail [dev]="selectedDev"></app-dev-detail>
+      </div>
+      <div class="col-xs-4">
+        <h2>Team 3</h2>
+        <ul class="developers">
+          <li *ngFor="let dev of team3"
+            [class.selected]="dev === selectedDev"
+            (click)="onSelect(dev)">
+            <span class="badge">{{dev.id}}</span> {{dev.name}}
+          </li>
+        </ul>
+    
+        <app-dev-detail [dev]="selectedDev"></app-dev-detail>
+      </div>
+      <div class="col-xs-4">
+        <h2>Team 4</h2>
+        <ul class="developers">
+          <li *ngFor="let dev of team4"
+            [class.selected]="dev === selectedDev"
+            (click)="onSelect(dev)">
+            <span class="badge">{{dev.id}}</span> {{dev.name}}
+          </li>
+        </ul>
+    
+        <app-dev-detail [dev]="selectedDev"></app-dev-detail>
+      </div>
+  </div>
+  
+</div>
+
