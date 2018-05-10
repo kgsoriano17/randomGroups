@@ -20,7 +20,7 @@ export class DevsComponent implements OnInit {
   constructor(private devService: DevService) { }
 
   getDevs(): void {
-    this.devs = this.devService.getDevs();
+    this.devService.getDevs().subscribe(devs => this.team1 = devs);
   }
 
   onSelect(hero: Devs): void {

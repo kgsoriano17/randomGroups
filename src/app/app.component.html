@@ -1,10 +1,12 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <img width="300" alt="Angular Logo" src="../assets/logo.svg">
 </div>
 
-<ul>
-  <app-devs></app-devs>
-</ul>
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/devs">Developers</a>
+</nav>
 
+  <router-outlet></router-outlet>
+  <app-messages></app-messages>
 <button class="btn-random" (click)="randGroups()">Random Groups</button>

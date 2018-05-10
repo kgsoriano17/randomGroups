@@ -5,16 +5,22 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { DevsComponent } from './devs/devs.component';
 import { DevDetailComponent } from './dev-detail/dev-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DevsComponent,
-    DevDetailComponent
+    DevDetailComponent,
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
