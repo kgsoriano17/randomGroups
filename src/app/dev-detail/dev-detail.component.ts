@@ -12,7 +12,7 @@ import { DevService } from '../dev.service';
 })
 export class DevDetailComponent implements OnInit {
 
-  @Input() dev: Devs;
+  @Input() dev: Devs; // Devs[]?
   constructor(
     private route: ActivatedRoute,
     private devService: DevService,
