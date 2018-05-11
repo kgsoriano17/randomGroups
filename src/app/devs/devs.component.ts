@@ -10,23 +10,22 @@ import { DevService } from '../dev.service';
 })
 export class DevsComponent implements OnInit {
 
-  team1 = TEAM1;
+  team1 = TEAM1; // Should be Devs[]
   team2 = TEAM2;
   team3 = TEAM3;
   team4 = TEAM4;
 
-  selectedDev: Devs;
+  // selectedDev: Devs;
 
   constructor(private devService: DevService) { }
 
-  getDevs(): void {
-    this.devService.getDevs().subscribe(devs => this.team1 = devs);
-  }
-
-  onSelect(hero: Devs): void {
-    this.selectedDev = hero;
-  }
+  // onSelect(hero: Devs): void {
+  //   this.selectedDev = hero;
+  // }
   ngOnInit() {
     this.getDevs();
+  }
+  getDevs(): void {
+    this.devService.getDevs().subscribe(devs => this.team1 = devs);
   }
 }

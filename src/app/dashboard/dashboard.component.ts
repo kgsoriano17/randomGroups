@@ -8,16 +8,15 @@ import { DevService } from '../dev.service';
   styleUrls: [ './dashboard.component.sass' ]
 })
 export class DashboardComponent implements OnInit {
-  heroes: Devs[] = [];
+  devs: Devs[] = [];
 
-  constructor(private heroService: DevService) { }
+  constructor(private devService: DevService) { }
 
   ngOnInit() {
-    this.getHeroes();
+    this.getDevs();
   }
 
-  getHeroes(): void {
-    this.heroService.getDevs()
-      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+  getDevs(): void {
+    this.devService.getDevs().subscribe(devs => this.devs = devs.slice(1, 5));
   }
 }
